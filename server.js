@@ -31,10 +31,13 @@ app.get("/api/hello", function (req, res) {
 
 //
 app.get('/api/whoami', (req, res) => {
-
+  console.log(req.headers);
+  let IP = req.ip;
+  let language = req.headers["accept-language"];
+  // let software = req.headers[]
   res.json({
-    ipaddress: '',
-    language: '',
+    ipaddress: IP,
+    language: language,
     software: ''
   });
 });
