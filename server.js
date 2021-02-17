@@ -29,7 +29,7 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-//
+//using built in methods to parse header.
 app.get('/api/whoami', (req, res) => {
   console.log(req.headers);
   let IP = req.ip;
